@@ -19,7 +19,7 @@ public class UtilXSDs {
     public static String XSD_NAME = "";
     public static String APP_PATH = "./";
     public static HashMap<Integer, String> map = null;
-    public static final String XSD_TEMPLATE_PATH = "./templates/template.wsdl";
+    public static final String XSD_TEMPLATE_PATH = "./templates/templateReq.xsd";
 
     public static int load() throws IOException, SAXException, ParserConfigurationException {
         int xsdfilenumber = 0;
@@ -32,7 +32,6 @@ public class UtilXSDs {
                         map = Util.loadconfiguration();
                     }
                     xsdfilenumber++;
-
                 }
             }
         }
@@ -42,22 +41,24 @@ public class UtilXSDs {
 
     public static void parseinputparameter() throws ParserConfigurationException, IOException, SAXException {
         String name = "WLS_" + map.get(1001) + "_" + map.get(1002) + "_" + map.get(1003) + "Req.xsd";
-        Util.loadconfiguration();
+
+        replacementslist = new ArrayList<>();
+        replacementslist.add(new UtilValues("TAG_24", map.get(1013)));
+        replacementslist.add(new UtilValues("TAG_03", map.get(1009) + "/" + map.get(1010) + "/" + Util.capitalize(map.get(1011).toLowerCase()) + "/" + map.get(1001).toLowerCase() + "/" + map.get(1002).toLowerCase() + "/" + map.get(1003).toLowerCase() + "/Req-" + map.get(1006)));
+        replacementslist.add(new UtilValues("TAG_REQ", map.get(1001).toLowerCase() + "" + map.get(1002) + "" + map.get(1003) + "ProdReq"));
+        replace(replacementslist,name);
+
         XSSchemaSet schemaSet;
         XSSchema xsSchema;
-
         try {
             XSOMParser parser = new XSOMParser();
             //parser.parse(new File(XSD_NAME));
             //schemaSet = parser.getResult();
             //xsSchema = schemaSet.getSchema(1);
 
-            generate(name);
         } catch (Exception exp) {
             System.out.println(exp.getMessage());
         }
-
-
     }
 
     public static void parseoutputparameter() throws ParserConfigurationException, IOException, SAXException {
@@ -71,36 +72,12 @@ public class UtilXSDs {
             //schemaSet = parser.getResult();
             //xsSchema = schemaSet.getSchema(1);
 
-            generate(name);
+
         } catch (Exception exp) {
             System.out.println(exp.getMessage());
         }
 
 
-    }
-
-    private static void generate(String name) throws Exception {
-
-        replacementslist = new ArrayList<>();
-        replacementslist.add(new UtilValues("TAG_24", map.get(1013)));
-        replacementslist.add(new UtilValues("TAG_03", map.get(1009) + "/" + map.get(1010) + "/" + Util.capitalize(map.get(1011).toLowerCase()) + "/" + map.get(1001).toLowerCase() + "/" + map.get(1002).toLowerCase() + "/" + map.get(1003).toLowerCase() + "/Req-" + map.get(1006)));
-
-       /* File folder = new File("./Generated/Schemas");
-
-        if (!folder.exists())
-            folder.mkdir();
-
-
-        Writer writer = null;
-        try {
-            writer = new BufferedWriter(new OutputStreamWriter(
-                    new FileOutputStream("./Generated/Schemas/" + name), "utf-8"));
-            writer.write(text);
-        } catch (IOException ex) {
-            throw new IOException();
-        } finally {
-            writer.close();
-        }*/
     }
 
     public static void replace(ArrayList<UtilValues> list, String filename) throws IOException {
