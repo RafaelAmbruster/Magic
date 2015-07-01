@@ -46,12 +46,18 @@ public class UtilWSDL {
     public static void replace(ArrayList<UtilValues> list, HashMap<Integer, String> map) throws IOException {
 
         File log = new File(WSDL_TEMPLATE_PATH);
-        File folder = new File("./WSDL");
+
+        File gen = new File("./Generated");
+
+        if(!gen.exists())
+            gen.mkdir();
+
+        File folder = new File("./Generated/WSDL");
 
         if(!folder.exists())
             folder.mkdir();
 
-        File log_01 = new File("./WSDL/" + "WLS_" + map.get(1001) + "_" + map.get(1002) + "_" + map.get(1003) + ".wsdl");
+        File log_01 = new File("./Generated/WSDL/" + "WLS_" + map.get(1001) + "_" + map.get(1002) + "_" + map.get(1003) + ".wsdl");
         Util.duplicate(log, log_01);
 
         try {
