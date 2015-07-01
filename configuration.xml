@@ -1,4 +1,4 @@
-<!--
+﻿<!--
   ~ Copyright (c) 2015. Propiedad de SOAint.
   ~ Owner: Rafael Ambruster.
   -->
@@ -10,11 +10,11 @@
 
         <property id="1001">
             <name>"Objeto de Datos (O.D.)"</name>
-            <value>Empleo</value>
+            <value>TarjetaCredito</value>
         </property>
         <property id="1002">
             <name>"Entidad discreta O.D."</name>
-            <value>Empresa</value>
+            <value>MovimientoDetalle</value>
         </property>
         <property id="1003">
             <name>"Operación (Verbo Infinitivo)"</name>
@@ -22,14 +22,14 @@
         </property>
         <property id="1004">
             <name>"Versión Servicio (formato vX.Y)"</name>
-            <value>v1.1</value>
+            <value>v1.0</value>
         </property>
 
         <!--Versiones Técnicas-->
 
         <property id="1005">
             <name>"Versión WSDL (formato vX.Y)"</name>
-            <value>v1.1</value>
+            <value>v1.0</value>
         </property>
         <property id="1006">
             <name>"Versión XSD Req (formato vAAAA.MM)"</name>
@@ -56,7 +56,22 @@
         </property>
         <property id="1011">
             <name>"Backend"</name>
-            <value>Local</value>
+            <value>Credito</value>
         </property>
+
+        <!--Endpoint-->
+
+        <property id="1012">
+            <name>"Endpoint"</name>
+            <value>CO/tarjetacredito/v1_0/movimientodetalleObtener</value>
+        </property>
+
+        <!--URL-->
+
+        <property id="1013">
+            <name>"URL"</name>
+            <value>http://mdwcorp.falabella.com</value>
+        </property>
+
     </value_list>
 </Configurations>

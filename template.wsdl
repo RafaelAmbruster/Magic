@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <wsdl:definitions name="TAG_01"
-                  targetNamespace="http://mdwcorp.falabella.com/OSB/wsdl/TAG_02"
+                  targetNamespace="TAG_24/OSB/wsdl/TAG_02"
                   xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
-                  xmlns:tns="http://mdwcorp.falabella.com/OSB/wsdl/TAG_02"
+                  xmlns:tns="TAG_24/OSB/wsdl/TAG_02"
                   xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-                  xmlns:xsd1="http://mdwcorp.falabella.com/OSB/schema/TAG_03"
-                  xmlns:xsd2="http://mdwcorp.falabella.com/OSB/schema/TAG_04"
+                  xmlns:xsd1="TAG_24/WLS/schema/TAG_03"
+                  xmlns:xsd2="TAG_24/WLS/schema/TAG_04"
                   xmlns:xsd4="http://schemas.xmlsoap.org/soap/envelope/">
     <wsdl:types>
 	    <xsd:schema
-			targetNamespace="http://mdwcorp.falabella.com/WLS/wsdl/TAG_02">
-			<xsd:element name="EmpresaEmpleoOpFault" type="xsd:string"></xsd:element>
+			targetNamespace="TAG_24/WLS/wsdl/TAG_02">
+			<xsd:element name="TAG_22" type="xsd:string"></xsd:element>
 		</xsd:schema>
         <xsd:schema>
-            <xsd:import namespace="http://mdwcorp.falabella.com/OSB/schema/TAG_03"
+            <xsd:import namespace="TAG_24/WLS/schema/TAG_03"
                         schemaLocation="../Schemas/TAG_05">
             </xsd:import>
-            <xsd:import namespace="http://mdwcorp.falabella.com/OSB/schema/TAG_04"
+            <xsd:import namespace="TAG_24/WLS/schema/TAG_04"
                         schemaLocation="../Schemas/TAG_06">
             </xsd:import>
             <xsd:import namespace="http://schemas.xmlsoap.org/soap/envelope/"
@@ -48,7 +48,7 @@
     <wsdl:binding name="TAG_18" type="tns:TAG_16">
         <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
         <wsdl:operation name="TAG_17">
-            <soap:operation soapAction="http://mdwcorp.falabella.com/OSB/wsdl/TAG_19"/>
+            <soap:operation soapAction="TAG_24/OSB/wsdl/TAG_19"/>
             <wsdl:input>
                 <soap:body use="literal" parts="TAG_08"/>
                 <soap:header use="literal" part="TAG_10" message="tns:TAG_07"/>
@@ -65,7 +65,7 @@
 
     <wsdl:service name="TAG_01">
         <wsdl:port binding="tns:TAG_18" name="TAG_20">
-            <soap:address location="TAG_21"/>
+            <soap:address location="TAG_23"/>
         </wsdl:port>
     </wsdl:service>
 </wsdl:definitions>
