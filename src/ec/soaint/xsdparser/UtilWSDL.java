@@ -10,7 +10,7 @@ import java.util.HashMap;
 public class UtilWSDL {
 
     public static ArrayList<UtilValues> replacementslist;
-    public static final String WSDL_TEMPLATE_PATH = "./template.wsdl";
+    public static final String WSDL_TEMPLATE_PATH = "./templates/template.wsdl";
 
     public static void generate(HashMap<Integer, String> map) throws IOException {
 
