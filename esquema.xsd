@@ -1,5 +1,6 @@
 <schema targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/sp/movimienTC"
-        xmlns="http://www.w3.org/2001/XMLSchema" xmlns:db="http://xmlns.oracle.com/pcbpel/adapter/db/sp/movimienTC"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:db="http://xmlns.oracle.com/pcbpel/adapter/db/sp/movimienTC"
         elementFormDefault="qualified">
     <element name="InputParameters">
         <complexType>
