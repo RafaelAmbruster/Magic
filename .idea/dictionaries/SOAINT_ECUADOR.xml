@@ -2,6 +2,8 @@
   <dictionary name="SOAINT-ECUADOR">
     <words>
       <w>bheader</w>
+      <w>ctelement</w>
+      <w>sqelement</w>
     </words>
   </dictionary>
 </component>

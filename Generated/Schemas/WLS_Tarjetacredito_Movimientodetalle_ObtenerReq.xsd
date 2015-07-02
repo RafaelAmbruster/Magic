@@ -1,0 +1,35 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<schema
+	targetNamespace="http://mdwcorp.falabella.com/WLS/schema/BCO/CO/Credito/tarjetacredito/movimientodetalle/obtener/Req-v2015.06"
+	elementFormDefault="qualified"
+	xmlns="http://www.w3.org/2001/XMLSchema"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:prod="http://mdwcorp.falabella.com/WLS/schema/BCO/CO/Credito/tarjetacredito/movimientodetalle/obtener/Req-v2015.06"
+	xmlns:db="TAG_DB"
+	xmlns:Q1="http://mdwcorp.falabella.com/common/schema/clientservice"
+	xmlns:Q2="http://mdwcorp.falabella.com/common/schema/clientserviceFIF">
+
+	<xs:import
+		schemaLocation="../../../UT_EsquemasComunesFIF_V.1.0/Specifications/XSD/Common/MdwCorp_Common_clientServiceFIF.xsd"
+		namespace="http://mdwcorp.falabella.com/common/schema/clientserviceFIF"></xs:import>
+	<xs:import
+		schemaLocation="../../../UT_EsquemasComunes_V.2.0/Specifications/XSD/Common/MdwCorp_Common_clientService.xsd"
+		namespace="http://mdwcorp.falabella.com/common/schema/clientservice"></xs:import>
+
+	<element name="TarjetacreditoMovimientoDetalleObtenerProdReq" type="prod:TarjetacreditoMovimientoDetalleObtenerProdReq_TYPE">
+	</element>
+
+	<complexType name="TarjetacreditoMovimientoDetalleObtenerProdReq_TYPE">
+		<sequence>
+			<xs:element name="clientService" type="Q1:ClientService_TYPE"
+				maxOccurs="1" minOccurs="1">
+			</xs:element>
+			<xs:element name="clientServiceFIF" type="Q2:ClientServiceFIF_TYPE"
+				maxOccurs="1" minOccurs="1"></xs:element>
+
+			TAG_ELEMENTS
+
+		</sequence>
+	</complexType>
+</schema>

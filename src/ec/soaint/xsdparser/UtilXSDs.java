@@ -44,22 +44,27 @@ public class UtilXSDs {
         Util.ceate(replacementslist, log, log_01);
 
         try {
-            // parse the document
+
             DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
             Document doc = docBuilder.parse(new File("./" + map.get(1014)));
-            NodeList list = doc.getElementsByTagName("element");
 
-            //loop to print data
-            for (int i = 0; i < list.getLength(); i++) {
-                Element first = (Element) list.item(i);
-                if (first.hasAttributes()) {
-                    String nm = first.getAttribute("name");
-                    System.out.println(nm);
-                    String nm1 = first.getAttribute("type");
-                    System.out.println(nm1);
-                }
+            NodeList nodesIN = doc.getElementsByTagName("InputParameters");
+            Element elementIN = (Element) nodesIN.item(0);
+
+            NodeList nodesCT = elementIN.getElementsByTagName("complexType");
+            Element elementCT = (Element) nodesCT.item(0);
+
+            NodeList nodesSQ = elementCT.getElementsByTagName("sequence");
+            Element elementSQ = (Element) nodesSQ.item(0);
+
+            NodeList nodesEL = elementSQ.getElementsByTagName("sequence");
+
+            for (int i = 0; i < nodesEL.getLength(); i++) {
+                System.out.println(nodesEL.item(i).getTextContent());
             }
+
+
         } catch (ParserConfigurationException e) {
             e.printStackTrace();
         } catch (SAXException e) {
@@ -73,5 +78,6 @@ public class UtilXSDs {
     public static void parseoutputparameter() throws ParserConfigurationException, IOException, SAXException {
         String name = "WLS_" + Util.capitalize(map.get(1001)) + "_" + Util.capitalize(map.get(1002)) + "_" + Util.capitalize(map.get(1003)) + "Resp.xsd";
     }
+
 
 }

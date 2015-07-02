@@ -16,7 +16,7 @@ public class Main {
 
             Util.createpath();
             UtilWSDL.init();
-            //UtilXSDs.init();
+            UtilXSDs.init();
 
         } catch (ParserConfigurationException e) {
             System.out.println(e.getMessage());
