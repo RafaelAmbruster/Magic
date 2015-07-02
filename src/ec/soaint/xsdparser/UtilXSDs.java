@@ -2,6 +2,7 @@ package ec.soaint.xsdparser;
 
 
 import org.w3c.dom.Document;
+import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
@@ -46,16 +47,23 @@ public class UtilXSDs {
             DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
             Document doc = docBuilder.parse(new File("./" + map.get(1014)));
 
-            NodeList nodesIN = doc.getElementsByTagName("element");
+
+            NodeList nodeinput = doc.getElementsByTagName("InputParameters");
+            Node in = nodeinput.item(0);
+
+            NodeList nodesIN = in.getChildNodes().item(0).getChildNodes();
+
 
             for (int i = 0; i < nodesIN.getLength(); i++) {
-                System.out.println("===================================================================");
-                System.out.println(nodesIN.item(i).getAttributes().getNamedItem("name").getNodeValue());
-                System.out.println(nodesIN.item(i).getAttributes().getNamedItem("type").getNodeValue());
-                System.out.println(nodesIN.item(i).getAttributes().getNamedItem("db:index").getNodeValue());
-                System.out.println(nodesIN.item(i).getAttributes().getNamedItem("db:type").getNodeValue());
-                System.out.println(nodesIN.item(i).getAttributes().getNamedItem("minOccurs").getNodeValue());
-                System.out.println("===================================================================");
+                if(nodesIN.item(i).getAttributes().getLength() > 1) {
+                    System.out.println("===================================================================");
+                    System.out.println(nodesIN.item(i).getAttributes().getNamedItem("name").getNodeValue());
+                    System.out.println(nodesIN.item(i).getAttributes().getNamedItem("type").getNodeValue());
+                    System.out.println(nodesIN.item(i).getAttributes().getNamedItem("db:index").getNodeValue());
+                    System.out.println(nodesIN.item(i).getAttributes().getNamedItem("db:type").getNodeValue());
+                    System.out.println(nodesIN.item(i).getAttributes().getNamedItem("minOccurs").getNodeValue());
+                    System.out.println("===================================================================");
+                }
             }
 
 
