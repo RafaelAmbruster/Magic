@@ -2,7 +2,6 @@ package ec.soaint.xsdparser;
 
 
 import org.w3c.dom.Document;
-import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
@@ -22,8 +21,6 @@ public class UtilXSDs {
     public static ArrayList<UtilValues> replacementslist;
     public static HashMap<Integer, String> map;
     public static final String XSDREQ_TEMPLATE_PATH = "./templates/templateReq.xsd";
-    public static final String XSDRESP_TEMPLATE_PATH = "./templates/templateResp.xsd";
-
 
     public static void init() throws IOException, SAXException, ParserConfigurationException {
         map = Util.loadconfiguration();
@@ -49,19 +46,16 @@ public class UtilXSDs {
             DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
             Document doc = docBuilder.parse(new File("./" + map.get(1014)));
 
-            NodeList nodesIN = doc.getElementsByTagName("InputParameters");
-            Element elementIN = (Element) nodesIN.item(0);
+            NodeList nodesIN = doc.getElementsByTagName("element");
 
-            NodeList nodesCT = elementIN.getElementsByTagName("complexType");
-            Element elementCT = (Element) nodesCT.item(0);
-
-            NodeList nodesSQ = elementCT.getElementsByTagName("sequence");
-            Element elementSQ = (Element) nodesSQ.item(0);
-
-            NodeList nodesEL = elementSQ.getElementsByTagName("sequence");
-
-            for (int i = 0; i < nodesEL.getLength(); i++) {
-                System.out.println(nodesEL.item(i).getTextContent());
+            for (int i = 0; i < nodesIN.getLength(); i++) {
+                System.out.println("===================================================================");
+                System.out.println(nodesIN.item(i).getAttributes().getNamedItem("name").getNodeValue());
+                System.out.println(nodesIN.item(i).getAttributes().getNamedItem("type").getNodeValue());
+                System.out.println(nodesIN.item(i).getAttributes().getNamedItem("db:index").getNodeValue());
+                System.out.println(nodesIN.item(i).getAttributes().getNamedItem("db:type").getNodeValue());
+                System.out.println(nodesIN.item(i).getAttributes().getNamedItem("minOccurs").getNodeValue());
+                System.out.println("===================================================================");
             }
 
 
