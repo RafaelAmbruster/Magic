@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions name="TAG_01"
+                  targetNamespace="TAG_24/OSB/wsdl/TAG_02/IMPL"
+                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:tns="TAG_24/OSB/wsdl/TAG_02/IMPL"
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                  xmlns:xsd1="TAG_24/OSB/schema/TAG_03"
+                  xmlns:xsd2="TAG_24/OSB/schema/TAG_04"
+                  xmlns:cs="http://mdwcorp.falabella.com/common/schema/clientservice"
+                  xmlns:csfif="http://mdwcorp.falabella.com/common/schema/clientserviceFIF"
+                  xmlns:xsd4="http://schemas.xmlsoap.org/soap/envelope/">
+    <wsdl:types>
+        <xsd:schema>
+            <xsd:import namespace="TAG_24/OSB/schema/TAG_03"
+                        schemaLocation="../Schemas/TAG_05">
+            </xsd:import>
+            <xsd:import namespace="TAG_24/OSB/schema/TAG_04"
+                        schemaLocation="../Schemas/TAG_06">
+            </xsd:import>
+            <xsd:import namespace="http://schemas.xmlsoap.org/soap/envelope/"
+				schemaLocation="../../../BCO_CO_UT_Esquemas_Comunes/Specifications/XSD/Common/SoapFault.xsd">
+			</xsd:import>
+            <xsd:import schemaLocation="../../../UT_EsquemasComunes_V.2.0/Specifications/XSD/Common/MdwCorp_Common_clientService.xsd" namespace="http://mdwcorp.falabella.com/common/schema/clientservice"/>
+            <xsd:import schemaLocation="../../../UT_EsquemasComunesFIF_V.1.0/Specifications/XSD/Common/MdwCorp_Common_clientServiceFIF.xsd" namespace="http://mdwcorp.falabella.com/common/schema/clientserviceFIF"/>
+
+        </xsd:schema>
+    </wsdl:types>
+
+    <wsdl:message name="TAG_07">
+        <wsdl:part name="TAG_08" element="xsd1:TAG_09"/>
+    </wsdl:message>
+    <wsdl:message name="TAG_11">
+        <wsdl:part name="TAG_12" element="xsd2:TAG_13"/>
+    </wsdl:message>
+    <wsdl:message name="TAG_22">
+        <wsdl:part name="TAG_15" element="xsd4:Fault"/>
+    </wsdl:message>
+    <wsdl:message name="ClientServiceMsg">
+        <wsdl:part name="ClientServiceParam" element="cs:ClientService" />
+        <wsdl:part name="ClientServiceFIFParam" element="csfif:ClientServiceFIF" />
+    </wsdl:message>
+
+
+    <wsdl:portType name="TAG_16">
+        <wsdl:operation name="TAG_17">
+            <wsdl:input message="tns:TAG_07"/>
+            <wsdl:output message="tns:TAG_11"/>
+            <wsdl:fault name="fault" message="tns:TAG_22"></wsdl:fault>
+        </wsdl:operation>
+    </wsdl:portType>
+
+
+    <wsdl:binding name="TAG_18" type="tns:TAG_16">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="TAG_17">
+            <soap:operation soapAction="TAG_24/OSB/wsdl/TAG_19"/>
+            <wsdl:input>
+                <soap:header message="tns:ClientServiceMsg" part="ClientServiceParam"
+                             use="literal" />
+                <soap:header message="tns:ClientServiceMsg" part="ClientServiceFIFParam"
+                             use="literal" />
+                <soap:body use="literal" parts="TAG_08"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="TAG_12"/>
+            </wsdl:output>
+            <wsdl:fault name="fault">
+                <soap:fault name="fault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+    </wsdl:binding>
+
+
+    <wsdl:service name="TAG_01">
+        <wsdl:port binding="tns:TAG_18" name="TAG_20">
+            <soap:address location="TAG_23"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

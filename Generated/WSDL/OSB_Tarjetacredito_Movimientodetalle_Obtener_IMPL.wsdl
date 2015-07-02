@@ -1,0 +1,80 @@
+
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions name="TarjetacreditoMovimientodetalleObtenerServiceIMPL"
+                  targetNamespace="http://mdwcorp.falabella.com/OSB/wsdl/BCO/CO/Credito/tarjetacredito/movimientodetalle/obtener-v1.0/IMPL"
+                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:tns="http://mdwcorp.falabella.com/OSB/wsdl/BCO/CO/Credito/tarjetacredito/movimientodetalle/obtener-v1.0/IMPL"
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                  xmlns:xsd1="http://mdwcorp.falabella.com/OSB/schema/BCO/CO/Credito/tarjetacredito/movimientodetalle/obtener/Req-v2015.06"
+                  xmlns:xsd2="http://mdwcorp.falabella.com/OSB/schema/BCO/CO/Credito/tarjetacredito/movimientodetalle/obtener/Resp-v2015.06"
+                  xmlns:cs="http://mdwcorp.falabella.com/common/schema/clientservice"
+                  xmlns:csfif="http://mdwcorp.falabella.com/common/schema/clientserviceFIF"
+                  xmlns:xsd4="http://schemas.xmlsoap.org/soap/envelope/">
+    <wsdl:types>
+        <xsd:schema>
+            <xsd:import namespace="http://mdwcorp.falabella.com/OSB/schema/BCO/CO/Credito/tarjetacredito/movimientodetalle/obtener/Req-v2015.06"
+                        schemaLocation="../Schemas/OSB_Tarjetacredito_Movimientodetalle_ObtenerReq.xsd">
+            </xsd:import>
+            <xsd:import namespace="http://mdwcorp.falabella.com/OSB/schema/BCO/CO/Credito/tarjetacredito/movimientodetalle/obtener/Resp-v2015.06"
+                        schemaLocation="../Schemas/OSB_Tarjetacredito_Movimientodetalle_ObtenerResp.xsd">
+            </xsd:import>
+            <xsd:import namespace="http://schemas.xmlsoap.org/soap/envelope/"
+				schemaLocation="../../../BCO_CO_UT_Esquemas_Comunes/Specifications/XSD/Common/SoapFault.xsd">
+			</xsd:import>
+            <xsd:import schemaLocation="../../../UT_EsquemasComunes_V.2.0/Specifications/XSD/Common/MdwCorp_Common_clientService.xsd" namespace="http://mdwcorp.falabella.com/common/schema/clientservice"/>
+            <xsd:import schemaLocation="../../../UT_EsquemasComunesFIF_V.1.0/Specifications/XSD/Common/MdwCorp_Common_clientServiceFIF.xsd" namespace="http://mdwcorp.falabella.com/common/schema/clientserviceFIF"/>
+
+        </xsd:schema>
+    </wsdl:types>
+
+    <wsdl:message name="TarjetacreditoMovimientodetalleObtenerMsgReq">
+        <wsdl:part name="TarjetacreditoMovimientodetalleObtenerReqParam" element="xsd1:tarjetaCreditoMovimientoDetalleObtenerImplReq"/>
+    </wsdl:message>
+    <wsdl:message name="TarjetacreditoMovimientodetalleObtenerMsgResp">
+        <wsdl:part name="TarjetacreditoMovimientodetalleObtenerRespParam" element="xsd2:tarjetaCreditoMovimientoDetalleObtenerImplResp"/>
+    </wsdl:message>
+    <wsdl:message name="TarjetacreditoMovimientodetalleObtenerOpFault">
+        <wsdl:part name="TarjetacreditoMovimientodetalleObtenerFaultParam" element="xsd4:Fault"/>
+    </wsdl:message>
+    <wsdl:message name="ClientServiceMsg">
+        <wsdl:part name="ClientServiceParam" element="cs:ClientService" />
+        <wsdl:part name="ClientServiceFIFParam" element="csfif:ClientServiceFIF" />
+    </wsdl:message>
+
+
+    <wsdl:portType name="TarjetacreditoMovimientodetalleObtenerPt">
+        <wsdl:operation name="TarjetacreditoMovimientodetalleObtenerOp">
+            <wsdl:input message="tns:TarjetacreditoMovimientodetalleObtenerMsgReq"/>
+            <wsdl:output message="tns:TarjetacreditoMovimientodetalleObtenerMsgResp"/>
+            <wsdl:fault name="fault" message="tns:TarjetacreditoMovimientodetalleObtenerOpFault"></wsdl:fault>
+        </wsdl:operation>
+    </wsdl:portType>
+
+
+    <wsdl:binding name="TarjetacreditoMovimientodetalleObtenerBinding" type="tns:TarjetacreditoMovimientodetalleObtenerPt">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="TarjetacreditoMovimientodetalleObtenerOp">
+            <soap:operation soapAction="http://mdwcorp.falabella.com/OSB/wsdl/BCO/CO/Credito/tarjetacredito/movimientodetalle/obtener-v1.0/IMPL/Op"/>
+            <wsdl:input>
+                <soap:header message="tns:ClientServiceMsg" part="ClientServiceParam"
+                             use="literal" />
+                <soap:header message="tns:ClientServiceMsg" part="ClientServiceFIFParam"
+                             use="literal" />
+                <soap:body use="literal" parts="TarjetacreditoMovimientodetalleObtenerReqParam"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="TarjetacreditoMovimientodetalleObtenerRespParam"/>
+            </wsdl:output>
+            <wsdl:fault name="fault">
+                <soap:fault name="fault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+    </wsdl:binding>
+
+
+    <wsdl:service name="TarjetacreditoMovimientodetalleObtenerServiceIMPL">
+        <wsdl:port binding="tns:TarjetacreditoMovimientodetalleObtenerBinding" name="TarjetacreditoMovimientodetalleObtenerPortIMPL">
+            <soap:address location="CO/tarjetacredito/v1_0/movimientodetalleObtener"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>
