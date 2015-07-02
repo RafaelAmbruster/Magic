@@ -1,6 +1,10 @@
 package ec.soaint.xsdparser;
 
-import java.io.*;
+import org.xml.sax.SAXException;
+
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -11,8 +15,11 @@ public class UtilWSDL {
 
     public static ArrayList<UtilValues> replacementslist;
     public static final String WSDL_TEMPLATE_PATH = "./templates/template.wsdl";
+    public static HashMap<Integer, String> map = null;
 
-    public static void generate(HashMap<Integer, String> map) throws IOException {
+    public static void init() throws IOException, ParserConfigurationException, SAXException {
+
+        map = Util.loadconfiguration();
 
         replacementslist = new ArrayList<>();
         replacementslist.add(new UtilValues("TAG_01", map.get(1001) + map.get(1002) + map.get(1003) + "ServicePRD"));
@@ -40,49 +47,9 @@ public class UtilWSDL {
         replacementslist.add(new UtilValues("TAG_23", map.get(1012)));
         replacementslist.add(new UtilValues("TAG_24", map.get(1013)));
 
-        replace(replacementslist, map);
-    }
-
-    public static void replace(ArrayList<UtilValues> list, HashMap<Integer, String> map) throws IOException {
-
-        File log = new File(WSDL_TEMPLATE_PATH);
-
-        File gen = new File("./Generated");
-
-        if(!gen.exists())
-            gen.mkdir();
-
-        File folder = new File("./Generated/WSDL");
-
-        if(!folder.exists())
-            folder.mkdir();
-
         File log_01 = new File("./Generated/WSDL/" + "WLS_" + map.get(1001) + "_" + map.get(1002) + "_" + map.get(1003) + ".wsdl");
-        Util.duplicate(log, log_01);
-
-        try {
-            FileReader fr = new FileReader(log_01);
-            String s;
-            String totalStr = "";
-            try (BufferedReader br = new BufferedReader(fr)) {
-
-                while ((s = br.readLine()) != null) {
-                    totalStr += "\n" + s;
-                }
-
-                for (int i = 0; i < list.size(); i++) {
-                    totalStr = totalStr.replaceAll(list.get(i).getOldvalue(), list.get(i).getNewvalue());
-                }
-
-                FileWriter fw = new FileWriter(log_01);
-                fw.write(totalStr);
-                fw.close();
-
-            }
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-            e.printStackTrace();
-        }
+        File log = new File(WSDL_TEMPLATE_PATH);
+        Util.ceate(replacementslist, log, log_01);
     }
 
 

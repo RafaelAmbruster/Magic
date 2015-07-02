@@ -73,5 +73,12 @@
             <value>http://mdwcorp.falabella.com</value>
         </property>
 
+        <!--SIGN-->
+
+        <property id="1014">
+            <name>"Esquema"</name>
+            <value>esquema.xsd</value>
+        </property>
+
     </value_list>
 </Configurations>

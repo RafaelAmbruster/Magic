@@ -2,7 +2,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema
 	targetNamespace="http://mdwcorp.falabella.com/WLS/schema/BCO/CO/Credito/tarjetacredito/movimientodetalle/obtener/Req-v2015.06"
-	elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified"
+	xmlns="http://www.w3.org/2001/XMLSchema"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns:prod="http://mdwcorp.falabella.com/WLS/schema/BCO/CO/Credito/tarjetacredito/movimientodetalle/obtener/Req-v2015.06"
 	xmlns:db="TAG_DB"
@@ -16,10 +17,10 @@
 		schemaLocation="../../../UT_EsquemasComunes_V.2.0/Specifications/XSD/Common/MdwCorp_Common_clientService.xsd"
 		namespace="http://mdwcorp.falabella.com/common/schema/clientservice"></xs:import>
 
-	<element name="tarjetacreditoMovimientoDetalleObtenerProdReq" type="prod:tarjetacreditoMovimientoDetalleObtenerProdReq_TYPE">
+	<element name="TarjetacreditoMovimientoDetalleObtenerProdReq" type="prod:TarjetacreditoMovimientoDetalleObtenerProdReq_TYPE">
 	</element>
 
-	<complexType name="tarjetacreditoMovimientoDetalleObtenerProdReq_TYPE">
+	<complexType name="TarjetacreditoMovimientoDetalleObtenerProdReq_TYPE">
 		<sequence>
 			<xs:element name="clientService" type="Q1:ClientService_TYPE"
 				maxOccurs="1" minOccurs="1">

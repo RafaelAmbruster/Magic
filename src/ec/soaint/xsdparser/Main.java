@@ -14,14 +14,9 @@ public class Main {
     public static void main(String[] args) {
         try {
 
-            UtilWSDL.generate(Util.loadconfiguration());
-
-            if (UtilXSDs.load() > 1) {
-            } else if (UtilXSDs.load() == 0) {
-            } else {
-                UtilXSDs.parseinputparameter();
-                UtilXSDs.parseoutputparameter();
-            }
+            Util.createpath();
+            UtilWSDL.init();
+            UtilXSDs.init();
 
         } catch (ParserConfigurationException e) {
             System.out.println(e.getMessage());

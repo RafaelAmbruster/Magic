@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema
 	targetNamespace="TAG_24/WLS/schema/TAG_03"
-	elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified"
+	xmlns="http://www.w3.org/2001/XMLSchema"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns:prod="TAG_24/WLS/schema/TAG_03"
 	xmlns:db="TAG_DB"
