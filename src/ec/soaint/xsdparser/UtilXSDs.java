@@ -1,23 +1,24 @@
 package ec.soaint.xsdparser;
 
 
-import com.sun.xml.xsom.XSSchemaSet;
-import com.sun.xml.xsom.impl.util.SchemaWriter;
+import com.sun.xml.xsom.*;
 import com.sun.xml.xsom.parser.SchemaDocument;
 import com.sun.xml.xsom.parser.XSOMParser;
-import com.sun.xml.xsom.util.DomAnnotationParserFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import java.io.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Set;
 
 /**
@@ -49,41 +50,35 @@ public class UtilXSDs {
         File log_01 = new File("./Generated/Schemas/" + name);
         Util.ceate(replacementslist, log, log_01);
 
-        try {
+        /*try {
             // parse the document
             DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
-            Document doc = docBuilder.parse (new File("./" + map.get(1014)));
+            Document doc = docBuilder.parse(new File("./" + map.get(1014)));
             NodeList list = doc.getElementsByTagName("element");
 
             //loop to print data
-            for(int i = 0 ; i < list.getLength(); i++)
-            {
-                Element first = (Element)list.item(i);
-                if(first.hasAttributes())
-                {
+            for (int i = 0; i < list.getLength(); i++) {
+                Element first = (Element) list.item(i);
+                if (first.hasAttributes()) {
                     String nm = first.getAttribute("name");
                     System.out.println(nm);
                     String nm1 = first.getAttribute("type");
                     System.out.println(nm1);
                 }
             }
-        }
-        catch (ParserConfigurationException e)
-        {
+        } catch (ParserConfigurationException e) {
             e.printStackTrace();
-        }
-        catch (SAXException e)
-        {
+        } catch (SAXException e) {
             e.printStackTrace();
-        }
-        catch (IOException ed)
-        {
+        } catch (IOException ed) {
             ed.printStackTrace();
-        }
+        }*/
 
 
-        /*try {
+
+
+        try {
 
             InputStream is;
             if (new File("./" + map.get(1014)).exists()) {
@@ -92,11 +87,14 @@ public class UtilXSDs {
                 parser.parse(is);
                 XSSchemaSet result = parser.getResult();
 
+
                 Iterator itr = result.iterateSchema();
                 while (itr.hasNext()) {
                     XSSchema s = (XSSchema) itr.next();
 
                     System.out.println("Target namespace: " + s.getTargetNamespace());
+
+                    printElements(s);
 
                     Iterator jtr = s.iterateElementDecls();
                     while (jtr.hasNext()) {
@@ -116,6 +114,8 @@ public class UtilXSDs {
         } catch (Exception exp) {
             System.out.println(exp.getMessage());
         }
+
+        /*
 
         XSOMParser reader = new XSOMParser();
         // set an error handler so that you can receive error messages
@@ -142,6 +142,25 @@ public class UtilXSDs {
                 e.printStackTrace();
             throw e;
         }*/
+    }
+
+    public static void printElements(XSSchema xsSchema) {
+        XSComplexType xsComplexType = xsSchema.getComplexTypes().get(0);
+        XSContentType xsContentType = xsComplexType.getContentType();
+        XSParticle particle = xsContentType.asParticle();
+        if (particle != null) {
+            XSTerm term = particle.getTerm();
+            if (term.isModelGroup()) {
+                XSModelGroup xsModelGroup = term.asModelGroup();
+                XSParticle[] particles = xsModelGroup.getChildren();
+                for (XSParticle p : particles) {
+                    XSTerm pterm = p.getTerm();
+                    if (pterm.isElementDecl()) {
+                        System.out.println(pterm);
+                    }
+                }
+            }
+        }
     }
 
 
