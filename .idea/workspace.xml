@@ -7,9 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94444f35-c16b-408a-8bef-b05ef0d6729a" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\SOAint\Java\Magic\Generated\WSDL\OSB_Tarjetacredito_Movimientodetalle_Obtener_IMPL.wsdl" afterPath="" />
-      <change type="DELETED" beforePath="D:\SOAint\Java\Magic\Generated\WSDL\WLS_Tarjetacredito_Movimientodetalle_Obtener.wsdl" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ec/soaint/xsdparser/UtilXSDs.java" afterPath="$PROJECT_DIR$/src/ec/soaint/xsdparser/UtilXSDs.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/SOAINT_ECUADOR.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/templateOSBheader.wsdl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ec/soaint/xsdparser/UtilWSDL.java" afterPath="$PROJECT_DIR$/src/ec/soaint/xsdparser/UtilWSDL.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/configuration.xml" afterPath="$PROJECT_DIR$/configuration.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/templateOSB.wsdl" afterPath="$PROJECT_DIR$/templates/templateOSB.wsdl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Magic.iws" />
@@ -33,11 +35,75 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="templateOSB.wsdl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/templateOSB.wsdl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="48" column="24" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="configuration.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/configuration.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="82" column="20" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppPathManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Desktop/directory/utils/configuration/AppPathManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#2287#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="esquema.xsd" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/esquema.xsd">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.252302">
+              <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConfigurationManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Desktop/directory/utils/configuration/ConfigurationManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#1612#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UtilValues.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ec/soaint/xsdparser/UtilValues.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="UtilWSDL.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ec/soaint/xsdparser/UtilWSDL.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="62" column="202" selection-start-line="62" selection-start-column="202" selection-end-line="62" selection-end-column="202" />
+              <caret line="94" column="51" selection-start-line="94" selection-start-column="51" selection-end-line="94" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -45,23 +111,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UtilXSDs.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ec/soaint/xsdparser/UtilXSDs.java">
+      <file leaf-file-name="templateReq.xsd" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/templateReq.xsd">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="73" column="139" selection-start-line="73" selection-start-column="139" selection-end-line="73" selection-end-column="139" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Util.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ec/soaint/xsdparser/Util.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.91392404">
-              <caret line="57" column="8" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="51" />
+              <caret line="5" column="47" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -85,16 +139,17 @@
         <option value="$PROJECT_DIR$/src/ec/soaint/xsdparser/SchemaParser.java" />
         <option value="$PROJECT_DIR$/Generated/Schemas/WLS_TarjetaCredito_MovimientoDetalle_ObtenerReq.xsd" />
         <option value="$PROJECT_DIR$/esquema.xsd" />
-        <option value="$PROJECT_DIR$/configuration.xml" />
         <option value="$PROJECT_DIR$/src/ec/soaint/xsdparser/ErrorReporter.java" />
         <option value="$PROJECT_DIR$/src/ec/soaint/xsdparser/MapNamespaceContext.java" />
         <option value="$PROJECT_DIR$/src/ec/soaint/xsdparser/Main.java" />
         <option value="$PROJECT_DIR$/templates/templateWLS.wsdl" />
-        <option value="$PROJECT_DIR$/src/ec/soaint/xsdparser/UtilWSDL.java" />
-        <option value="$PROJECT_DIR$/templates/templateOSB.wsdl" />
         <option value="$PROJECT_DIR$/Generated/WSDL/WLS_Tarjetacredito_Movimientodetalle_Obtener.wsdl" />
         <option value="$PROJECT_DIR$/Generated/WSDL/OSB_Tarjetacredito_Movimientodetalle_Obtener_IMPL.wsdl" />
         <option value="$PROJECT_DIR$/src/ec/soaint/xsdparser/UtilXSDs.java" />
+        <option value="$PROJECT_DIR$/templates/templateOSB.wsdl" />
+        <option value="$PROJECT_DIR$/configuration.xml" />
+        <option value="$PROJECT_DIR$/src/ec/soaint/xsdparser/UtilWSDL.java" />
+        <option value="$PROJECT_DIR$/src/ec/soaint/xsdparser/AppPathManager.java" />
       </list>
     </option>
   </component>
@@ -296,11 +351,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\SOAint\Java\Magic\src\ec\soaint\xsdparser" />
       <recent name="D:\SOAint\Java\Magic\templates" />
       <recent name="D:\Desarrollo\Java\lib" />
       <recent name="D:\Desarrollo\Java\src\ec\soaint\xsdparser" />
       <recent name="D:\Desarrollo\Java" />
-      <recent name="D:\Desarrollo\Java\Magic\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Desarrollo\Java\Magic\templates" />
@@ -652,15 +707,15 @@
       <workItem from="1435788577437" duration="237000" />
       <workItem from="1435788941817" duration="2884000" />
       <workItem from="1435795704186" duration="17441000" />
-      <workItem from="1435848526736" duration="13135000" />
+      <workItem from="1435848526736" duration="14470000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33697000" />
+    <option name="totallyTimeSpent" value="35032000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1378" height="744" extended-state="1" />
+    <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -673,10 +728,10 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33385828" sideWeight="0.49706313" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1007874" sideWeight="0.49706313" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26725402" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3010279" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913387" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -763,34 +818,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/esquema.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ec/soaint/xsdparser/UtilValues.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ec/soaint/xsdparser/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/templateReq.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="47" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
           <folding />
         </state>
       </provider>
@@ -811,26 +842,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/configuration.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5125628">
-          <caret line="12" column="33" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/templateWLS.wsdl">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5164557">
           <caret line="12" column="59" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/templateOSB.wsdl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5037975">
-          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -851,19 +866,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ec/soaint/xsdparser/UtilWSDL.java">
+    <entry file="file://$PROJECT_DIR$/templates/templateOSBheader.wsdl">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="62" column="202" selection-start-line="62" selection-start-column="202" selection-end-line="62" selection-end-column="202" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ec/soaint/xsdparser/Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.664825">
+          <caret line="57" column="8" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="51" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ec/soaint/xsdparser/UtilXSDs.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="1.3535912">
           <caret line="73" column="139" selection-start-line="73" selection-start-column="139" selection-end-line="73" selection-end-column="139" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -871,10 +892,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ec/soaint/xsdparser/Util.java">
+    <entry file="file://$PROJECT_DIR$/templates/templateOSB.wsdl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.91392404">
-          <caret line="57" column="8" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="51" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="48" column="24" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configuration.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="82" column="20" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/directory/utils/configuration/AppPathManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#2287#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/directory/utils/configuration/ConfigurationManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#1612#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ec/soaint/xsdparser/UtilValues.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ec/soaint/xsdparser/UtilWSDL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="94" column="51" selection-start-line="94" selection-start-column="51" selection-end-line="94" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/templateReq.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="47" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/esquema.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.252302">
+          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
           <folding />
         </state>
       </provider>
