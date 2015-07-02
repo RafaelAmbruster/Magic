@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <wsdl:definitions name="TarjetacreditoMovimientodetalleObtenerServicePRD"
                   targetNamespace="http://mdwcorp.falabella.com/WSL/wsdl/BCO/CO/Credito/tarjetacredito/movimientodetalle/obtener-v1.0"

@@ -32,7 +32,7 @@ public class UtilXSDs {
     }
 
     public static void parseinputparameter() throws ParserConfigurationException, IOException, SAXException {
-        String name = "WLS_" + map.get(1001) + "_" + map.get(1002) + "_" + map.get(1003) + "Req.xsd";
+        String name = "WLS_" + Util.capitalize(map.get(1001)) + "_" + Util.capitalize(map.get(1002)) + "_" + Util.capitalize(map.get(1003)) + "Req.xsd";
 
         replacementslist = new ArrayList<>();
         replacementslist.add(new UtilValues("TAG_24", map.get(1013)));
@@ -71,7 +71,7 @@ public class UtilXSDs {
 
 
     public static void parseoutputparameter() throws ParserConfigurationException, IOException, SAXException {
-        String name = "WLS_" + map.get(1001) + "_" + map.get(1002) + "_" + map.get(1003) + "Resp.xsd";
+        String name = "WLS_" + Util.capitalize(map.get(1001)) + "_" + Util.capitalize(map.get(1002)) + "_" + Util.capitalize(map.get(1003)) + "Resp.xsd";
     }
 
 }
